@@ -29,7 +29,7 @@ function headerHTML() {
       <header>
 
         <div class="header-content">
-	        <div class="header-title">Website Title</div>
+	        <div class="header-title">Michy's Everything Site</div>
 	        
 	        <!-- NAVIGATION -->
 	        <nav>

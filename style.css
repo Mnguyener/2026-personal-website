@@ -7,9 +7,10 @@
 /* Variables are used like this: var(--text-color) */
 :root {
   /* Background Colors: */
-  --background-color: #eeeeee;
-  --content-background-color: #ffffff;
-  --sidebar-background-color: #ffffff;
+  --background-color: #EFE9E3;
+  --content-background-color: #D9CFC7;
+  --sidebar-background-color: #C9B59C;
+    
 
   /* Text Colors: */
   --text-color: #000000;
@@ -50,7 +51,7 @@ body {
   font-family: var(--font);
   line-height: 1.2;
   background: var(--background-color);
-  background-image: url("");
+  background-image: url("img/coffee_pattern_seamless.jpg");
   
 }
 
