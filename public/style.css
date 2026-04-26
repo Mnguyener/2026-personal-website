@@ -73,7 +73,7 @@ body ::selection {
 }
 .light-mode {
   background: var(--background-color);
-  background-image: url("img/coffee_pattern_seamless.jpg");
+  background-image: url("./img/coffee_pattern_seamless.jpg");
   --background-color: #EFE9E3;
   --content-background-color: #D9CFC7;
   --sidebar-background-color: #C9B59C;

@@ -88,20 +88,20 @@ function headerHTML() {
         </div>
         
         <div class="sidebar-section">
-          <div class="sidebar-title">Section Title</div>
+          <div class="sidebar-title">Last Game I Played</div>
           <blockquote>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            <p>Necessit atibus perferendis inventore tempore vel optio similique blanditiis quasi quam?</p>
+            <p>Hello Kitty Island Adventures</p>
+            <img src="img/hello-kitty.gif">
           </blockquote>
         </div>
         
         <div class="sidebar-section">
-          <div class="sidebar-title">Section Title</div>
+          <div class="sidebar-title">Current Obsessions</div>
           <ul>
-            <li>List</li>
-            <li>List</li>
-            <li><a href="/">List</a></li>
-            <li>List</li>
+            <li>Snoopy</li>
+            <li>Pocket notebooks</li>
+            <li>Pickleball</li>
+            <li>Pompompurin</li>
           </ul>
         </div>
         
@@ -115,7 +115,7 @@ function headerHTML() {
         <div class="sidebar-section">
           <div class="sidebar-title">Wall of stamps</div>
           <div>
-           <img src="img/goose.gif"> <img width="175" height="48" src="img/nintendo-switch.jpg"> <img src="img/i-love-my-computer.gif"> <img src="img/button.gif">
+           <img src="img/goose.gif"> <img src="img/rice.jpg"> <img src="img/join_logo.gif"> <img src="img/js-warning.gif"> <img src="img/dog of wisdom.gif"> <img width="175" height="48" src="img/nintendo-switch.jpg"> <img src="img/i-love-my-computer.gif"> 
           </div>
         </div>
         
@@ -123,7 +123,7 @@ function headerHTML() {
           <div class="sidebar-title">Song I'm Currently Obsessed With</div>
           <blockquote style="border:2px solid">
             <div class="marquee">
-              <a href="https://www.youtube.com/watch?v=DdGXfZaSpwY&list=RDDdGXfZaSpwY&start_radio=1" target="_blank" alt="youtube link">cosmosy “Physics ~ 物理的な ~“</a>    
+              <a href="https://www.youtube.com/watch?v=uJ4RoZpCxDU&list=RDAPNrkRFYF_8&index=3" target="_blank" alt="youtube link">When I Look at You</a>    
             </div> 
             </blockquote>
             <div class="images">
