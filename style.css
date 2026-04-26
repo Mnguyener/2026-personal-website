@@ -15,13 +15,13 @@
   /* Text Colors: */
   --text-color: #000000;
   --sidebar-text-color: #000000;
-  --link-color: #3026e8;
+  --link-color: #4B2E2B;
   --link-color-hover: #7780ec;
 
   /* Text: */
-  --font: Arial, sans-serif;
-  --heading-font: Georgia, serif;
-  --font-size: 14px;
+  --font: Lucida Console, monospace;
+  /*--heading-font: Verdana, serif;*/
+    --font-size: 14px;
 
   /* Other Settings: */
   --margin: 10px;
@@ -31,6 +31,23 @@
   --sidebar-width: 200px;
 }
 
+/*https://www.1001fonts.com/users/PikguraType/*/
+ @font-face { 
+    font-family: "StarCrush"; 
+    src: url('font/StarCrushRegular.woff2') format('woff2'),
+        url('font/StarCrushRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  /*https://www.dafont.com/pizzadude.d5*/
+@font-face {
+    font-family: "ArcadeClassic";
+    src: url('font/ArcadeClassic.woff2') format('woff2'),
+         url('font/ArcadeClassic.woff') format('woff');
+    font-style: normal;
+    font-display: swap;
+}
 /* -------------------------------------------------------- */
 /* BASICS */
 /* -------------------------------------------------------- */
@@ -39,7 +56,7 @@
   box-sizing: border-box;
 }
 
-body {
+  body {
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -47,12 +64,45 @@ body {
   font-size: var(--font-size);
   margin: 0;
   padding: var(--margin);
+  line-height: 1.2;
   color: var(--text-color);
   font-family: var(--font);
-  line-height: 1.2;
+}
+body ::selection {
+  background: var(--light);
+}
+.light-mode {
   background: var(--background-color);
   background-image: url("img/coffee_pattern_seamless.jpg");
-  
+  --background-color: #EFE9E3;
+  --content-background-color: #D9CFC7;
+  --sidebar-background-color: #C9B59C;
+  --light: #C9B59C;
+}
+
+.dark-mode {
+  --text-color: #e8e3fd;
+  --sidebar-text-color: #9bafdd;
+  --link-color: #988df3;
+  --link-color-hover: #9e48ec;
+  --background-color: #000000;
+  --content-background-color: #000000;
+  --sidebar-background-color: #000000;
+  --background: var(--light);
+  background-image: url("img/stars5.gif");
+  --light: #988df3;
+}
+
+.button-dark-mode {
+  background-image: url('img/moon-favicon.webp');
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+}
+.button-pos {
+  top:0;
+  right: 0;
+  position: absolute;  
 }
 
 ::selection {
@@ -104,6 +154,10 @@ main {
   border-radius: var(--round-borders);
 }
 
+.center {
+  text-align: center;
+}
+
 /* -------------------------------------------------------- */
 /* HEADER */
 /* -------------------------------------------------------- */
@@ -121,8 +175,8 @@ header {
 }
 
 .header-title {
-  font-family: var(--heading-font);
-  font-size: 1.5em;
+  font-family: "StarCrush";
+  font-size: 1.9em;
   font-weight: bold;
 }
 
@@ -155,8 +209,8 @@ aside {
 
 .sidebar-title {
   font-weight: bold;
-  font-size: 1.2em;
-  font-family: var(--heading-font);
+  font-size: 2em;
+  font-family: "ArcadeClassic";
 }
 
 .sidebar-section:not(:last-child) {
@@ -275,6 +329,8 @@ nav ul summary {
 nav ul ul li > a {
   padding-left: 30px;
 }
+
+
 
 /* NAVIGATION IN HEADER */
 
@@ -408,7 +464,7 @@ main h3,
 main h4,
 main h5,
 main h6 {
-  font-family: var(--heading-font);
+  font-family: "StarCrush";
   margin-bottom: 0;
   line-height: 1.5;
 }
@@ -423,27 +479,27 @@ main h6:first-child {
 }
 
 main h1 {
-  font-size: 1.5em;
+  font-size: 1.9em;
 }
 
 main h2 {
-  font-size: 1.4em;
+  font-size: 1.7em;
 }
 
 main h3 {
-  font-size: 1.3em;
+  font-size: 1.6em;
 }
 
 main h4 {
-  font-size: 1.2em;
+  font-size: 1.5em;
 }
 
 main h5 {
-  font-size: 1.1em;
+  font-size: 1.4em;
 }
 
 main h6 {
-  font-size: 1em;
+  font-size: 1.3em;
 }
 
 /* COLUMNS: */
@@ -583,10 +639,14 @@ main h6 {
   }
 }
 
-.marquee a {
+.marquee a, text{
     display: inline-block;
     padding-left: 100%;
-    animation: marquee 15s linear infinite;
+    animation: marquee 10s linear infinite;
+}
+
+.marquee img {
+  animation: marquee 15s linear infinite;
 }
 
 @keyframes marquee {

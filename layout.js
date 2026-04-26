@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   loadLayoutByPetraPixel();
 
   // Add any custom JavaScript code here...
+  loadTheme();
 });
 
 function loadLayoutByPetraPixel() {
@@ -11,6 +12,21 @@ function loadLayoutByPetraPixel() {
   mainEl.insertAdjacentHTML("beforebegin", headerHTML());
   mainEl.insertAdjacentHTML("afterend", footerHTML());
   giveActiveClassToCurrentPage();
+}
+function toggleTheme() {
+  const isDark = document.body.classList.toggle("dark-mode");
+  // save current theme to localStorage
+  localStorage.setItem("theme", isDark ? "dark-mode" : "light-mode");
+}
+function loadTheme() {
+  const savedTheme = localStorage.getItem("theme");
+  const button = document.querySelector("button.button-dark-mode");
+  if (savedTheme === "dark-mode") {
+    document.body.classList.add("dark-mode");
+  } else {
+    document.body.classList.add("light-mode");
+  }
+  button.addEventListener("click", toggleTheme);
 }
 
 const nesting = getNesting();
@@ -35,9 +51,9 @@ function headerHTML() {
 	        <nav>
 	          <ul>
 	            <li><a href="/">Home</a></li>
-	            <li><a href="/page1">Page 1</a></li>
-	            <li><a href="/page2">Page 2</a></li>
-	            <li><a href="/page3">Page 3</a></li>
+	            <li><a href="/page1">Georgio</a></li>
+	            <li><a href="/page2">Blogio</a></li>
+	            <li><a href="/page3">Q&A</a></li>
 	            <li>
 	                <strong>Submenu (hover to show)</strong>
 	                <ul>
@@ -50,10 +66,10 @@ function headerHTML() {
 	            </li>
 	          </ul>
 	        </nav>
-        	
+        
         </div>
-      </header>
 
+      </header>   
 	  
         
       <!-- =============================================== -->
@@ -64,9 +80,11 @@ function headerHTML() {
 	  
         
         <div class="sidebar-section">
-          <div class="sidebar-title">Section Title</div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          <p>Necessit atibus perferendis inventore tempore vel optio similique blanditiis quasi quam?</p>
+          <div class="sidebar-title">About Me</div>
+          <p>*°*✵ 23 y/o *°✵</p>
+          <p>·.*• software engineer ·.*•</p>
+          <p>✦☆.· she/her ✦☆.·</p>
+
         </div>
         
         <div class="sidebar-section">
@@ -95,19 +113,25 @@ function headerHTML() {
         </div>
         
         <div class="sidebar-section">
-          <div class="sidebar-title">Section Title</div>
-          <img class="full-width-image" src="https://picsum.photos/id/14/1000/400">
+          <div class="sidebar-title">Wall of stamps</div>
+          <div>
+           <img src="img/goose.gif"> <img width="175" height="48" src="img/nintendo-switch.jpg"> <img src="img/i-love-my-computer.gif"> <img src="img/button.gif">
+          </div>
         </div>
         
         <div class="sidebar-section">
-          <div class="sidebar-title">Section Title</div>
-          <div class="site-button">
-          	<a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a>
-        	<textarea><a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/img/linkback.gif" alt="petrapixel"></a></textarea>
-          </div>
-        </div>
+          <div class="sidebar-title">Song I'm Currently Obsessed With</div>
+          <blockquote style="border:2px solid">
+            <div class="marquee">
+              <a href="https://www.youtube.com/watch?v=DdGXfZaSpwY&list=RDDdGXfZaSpwY&start_radio=1" target="_blank" alt="youtube link">cosmosy “Physics ~ 物理的な ~“</a>    
+            </div> 
+            </blockquote>
+            <div class="images">
+              <img src="https://sakuradreams.neocities.org/Images/Purin104.gif">
+              <img src="https://sakuradreams.neocities.org/Images/Purin74.gif">
+            </div>
+        </div>      
       </aside>
-	
       `;
 }
 
@@ -124,7 +148,7 @@ function footerHTML() {
       <!-- =============================================== -->
 
       <footer>
-            <div>Footer Text. <a href="/">Link.</a> Template generated with <a href="https://petrapixel.neocities.org/coding/layout-generator.html">petrapixel's layout generator</a>.</div>
+            <div>Check out my github <a href="https://github.com/Mnguyener">here!</a> Template generated with <a href="https://petrapixel.neocities.org/coding/layout-generator.html">petrapixel's layout generator</a>.</div>
       </footer>`;
 }
 
@@ -168,4 +192,8 @@ function getNesting() {
   const numberOfSlashes = window.location.pathname.split("/").length - 1;
   if (numberOfSlashes == 1) return "./";
   return "../".repeat(numberOfSlashes - 1);
+}
+function darkMode(){
+    var element = document.body;
+    element.classList.toggle("dark-mode");
 }
