@@ -25,7 +25,7 @@ jobs:
       with:
         api_key: ${{ secrets.NEOCITIES_API_TOKEN }} #set secret
         cleanup: true
-        dist_dir: public
+       #dist_dir: public
         #protected_files: 'dropbox/*'
         neocities_supporter: false # set this to true if you have a supporter account and want to bypass unsuported files filter.
         preview_before_deploy: true
