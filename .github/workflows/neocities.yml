@@ -23,7 +23,7 @@ jobs:
     - name: Deploy to neocities
       uses: bcomnes/deploy-to-neocities@v3 # dont use master in production
       with:
-        api_key: ${{ secrets.NEOCITIES_API_TOKEN }}
+        api_key: ${{ secrets.NEOCITIES_API_TOKEN }} #set secret
         cleanup: true
         dist_dir: public
         #protected_files: 'dropbox/*'
